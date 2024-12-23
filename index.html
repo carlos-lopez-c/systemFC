@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('img/navidad.jpg') repeat;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .banner {
+            position: absolute;
+            top: 10%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-family: 'Cookie', cursive;
+            font-size: 3rem;
+            text-align: center;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .container {
+            display: flex;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 800px;
+            max-width: 100%;
+        }
+
+        .image-section {
+            flex: 1;
+            background: #6C63FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-section h1 {
+            margin-bottom: 20px;
+            color: #6C63FF;
+        }
+
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-section input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-section button {
+            background: #6C63FF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-section button:hover {
+            background: #5848C2;
+        }
+
+        .form-section a {
+            text-align: center;
+            margin-top: 10px;
+            color: #6C63FF;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .message {
+           color: red;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .image-section {
+                height: 200px;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+
+            .form-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-section input, .form-section button {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-section {
+                height: 150px;
+            }
+
+            .form-section h1 {
+                font-size: 1.2rem;
+            }
+
+            .form-section input, .form-section button {
+                font-size: 0.8rem;
+                padding: 6px;
+            }
+
+            @media (max-width: 768px) {
+            .banner {
+                font-size: 2rem;
+                padding: 15px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner {
+                font-size: 1.5rem;
+                padding: 10px 20px;
+            }
+        }
+        }
+    </style>
+    <title>FC🌹❤</title>
+    <link rel="icon" href="img/icono.png" type="image/png">
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="banner">Feliz Navidad</div>
+    <div class="container">
+        <div class="image-section">          
+           <img src="img/port.jpg" alt="">             
+        </div>
+        <div class="form-section">
+            <h1>TE AMO FLAQUITA ❤</h1>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <p class="message" id="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
